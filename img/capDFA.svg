@@ -1,0 +1,27 @@
+<?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg width="158pt" height="87pt" viewBox="0.00 0.00 158.00 86.80" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xmlns="http://www.w3.org/2000/svg" style="height:116px;width:210.656px;perspective-origin:105.328px 58px;transform-origin:105.328px 58px;">
+<g id="graph1" class="graph" transform="scale(1 1) rotate(0) translate(4 82.8)" style="height:auto;overflow-x:visible;overflow-y:visible;width:auto;perspective-origin:0px 0px;transform-origin:0px 0px;">
+<title style="height:auto;overflow-x:visible;overflow-y:visible;width:auto;perspective-origin:50% 50%;transform-origin:0px 0px;">finite_state_machine</title>
+<polygon fill="white" stroke="white" points="-4,5 -4,-82.8 155,-82.8 155,5 -4,5" style="height:auto;overflow-x:visible;overflow-y:visible;width:auto;perspective-origin:0px 0px;transform-origin:0px 0px;fill:rgb(255, 255, 255);stroke:rgb(255, 255, 255);"/>
+<!-- b -->
+<g id="node1" class="node" style="height:auto;overflow-x:visible;overflow-y:visible;width:auto;perspective-origin:0px 0px;transform-origin:0px 0px;"><title style="height:auto;overflow-x:visible;overflow-y:visible;width:auto;perspective-origin:50% 50%;transform-origin:0px 0px;">b</title>
+<ellipse fill="none" stroke="black" cx="128" cy="-22" rx="18" ry="18" style="height:auto;overflow-x:visible;overflow-y:visible;width:auto;perspective-origin:0px 0px;transform-origin:0px 0px;fill:none;stroke:rgb(0, 0, 0);cx:128px;cy:-22px;rx:18px;ry:18px;"/>
+<ellipse fill="none" stroke="black" cx="128" cy="-22" rx="22" ry="22" style="height:auto;overflow-x:visible;overflow-y:visible;width:auto;perspective-origin:0px 0px;transform-origin:0px 0px;fill:none;stroke:rgb(0, 0, 0);cx:128px;cy:-22px;rx:22px;ry:22px;"/>
+</g>
+<!-- b&#45;&gt;b -->
+<g id="edge4" class="edge" style="height:auto;overflow-x:visible;overflow-y:visible;width:auto;perspective-origin:0px 0px;transform-origin:0px 0px;"><title style="height:auto;overflow-x:visible;overflow-y:visible;width:auto;perspective-origin:50% 50%;transform-origin:0px 0px;">b-&gt;b</title>
+<path fill="none" stroke="black" d="M117.933,-41.7575C116.223,-52.3499 119.578,-62 128,-62 133.527,-62 136.872,-57.8441 138.035,-51.9932" style="height:auto;overflow-x:visible;overflow-y:visible;width:auto;perspective-origin:0px 0px;transform-origin:0px 0px;fill:none;stroke:rgb(0, 0, 0);"/>
+<polygon fill="black" stroke="black" points="141.536,-51.7683 138.067,-41.7575 134.536,-51.7465 141.536,-51.7683" style="height:auto;overflow-x:visible;overflow-y:visible;width:auto;perspective-origin:0px 0px;transform-origin:0px 0px;stroke:rgb(0, 0, 0);"/>
+<text text-anchor="middle" x="128" y="-66.2" font-family="Times,serif" font-size="14.00" style="display:block;font-family:Times, serif;font-size:14px;height:15.5938px;overflow-x:visible;overflow-y:visible;white-space:nowrap;width:26.0312px;perspective-origin:13.0156px 7.79688px;transform-origin:0px 0px;text-anchor:middle;">[a-z]</text>
+</g>
+<!-- a -->
+<g id="node2" class="node" style="height:auto;overflow-x:visible;overflow-y:visible;width:auto;perspective-origin:0px 0px;transform-origin:0px 0px;"><title style="height:auto;overflow-x:visible;overflow-y:visible;width:auto;perspective-origin:50% 50%;transform-origin:0px 0px;">a</title>
+<ellipse fill="none" stroke="black" cx="18" cy="-22" rx="18" ry="18" style="height:auto;overflow-x:visible;overflow-y:visible;width:auto;perspective-origin:0px 0px;transform-origin:0px 0px;fill:none;stroke:rgb(0, 0, 0);cx:18px;cy:-22px;rx:18px;ry:18px;"/>
+</g>
+<!-- a&#45;&gt;b -->
+<g id="edge2" class="edge" style="height:auto;overflow-x:visible;overflow-y:visible;width:auto;perspective-origin:0px 0px;transform-origin:0px 0px;"><title style="height:auto;overflow-x:visible;overflow-y:visible;width:auto;perspective-origin:50% 50%;transform-origin:0px 0px;">a-&gt;b</title>
+<path fill="none" stroke="black" d="M36.3521,-22C52.3508,-22 76.4756,-22 95.8159,-22" style="height:auto;overflow-x:visible;overflow-y:visible;width:auto;perspective-origin:0px 0px;transform-origin:0px 0px;fill:none;stroke:rgb(0, 0, 0);"/>
+<polygon fill="black" stroke="black" points="95.9864,-25.5001 105.986,-22 95.9863,-18.5001 95.9864,-25.5001" style="height:auto;overflow-x:visible;overflow-y:visible;width:auto;perspective-origin:0px 0px;transform-origin:0px 0px;stroke:rgb(0, 0, 0);"/>
+<text text-anchor="middle" x="71" y="-26.2" font-family="Times,serif" font-size="14.00" style="display:block;font-family:Times, serif;font-size:14px;height:15.5938px;overflow-x:visible;overflow-y:visible;white-space:nowrap;width:32.1719px;perspective-origin:16.0781px 7.79688px;transform-origin:0px 0px;text-anchor:middle;">[A-Z]</text>
+</g>
+</g>
+</svg>
