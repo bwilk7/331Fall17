@@ -3,3 +3,4 @@ git clone https://github.com/bwilk7/lupyter.git
 cd lupyter
 python setup.py install
 jupyter kernelspec install ../lupyter --user
+luarocks install inspect
