@@ -4,4 +4,6 @@ cd lupyter
 python setup.py install
 jupyter kernelspec install ../lupyter --user
 luarocks install inspect --local
+luarocks path --binary
 
+exit -1
