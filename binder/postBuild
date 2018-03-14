@@ -6,9 +6,11 @@ jupyter kernelspec install ../lupyter --user
 luarocks install inspect --local
 python ~/binder/set_envs.py ~/.local/share/jupyter/kernels/lupyter/kernel.json ~/binder/lua_env 
 
+cd ~
+mkdir scheme
 wget http://ftp.gnu.org/gnu/mit-scheme/stable.pkg/9.2/mit-scheme-9.2-x86-64.tar.gz
 tar xvf mit-scheme-9.2-x86-64.tar.gz
 cd mit-scheme-9.2/src/
-./configure
+./configure --prefix=~/scheme
 make compile-microcode
 make install
