@@ -9,7 +9,7 @@ python ~/binder/set_envs.py ~/.local/share/jupyter/kernels/lupyter/kernel.json ~
 cd ~
 mkdir scheme
 wget http://ftp.gnu.org/gnu/mit-scheme/stable.pkg/9.2/mit-scheme-9.2-x86-64.tar.gz 2> /dev/null >/dev/null
-tar xvf mit-scheme-9.2-x86-64.tar.gz
+tar xf mit-scheme-9.2-x86-64.tar.gz 2> /dev/null/ >/dev/null
 cd mit-scheme-9.2/src/
 ./configure --prefix=~/scheme
 make compile-microcode
