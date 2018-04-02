@@ -32,9 +32,9 @@ export LD_RUN_PATH=/home/jovyan/zmq/lib
 export CPATH=/home/jovyan/zmq/include
 
 sed -i 's|SCHEME = scheme| SCHEME = /home/jovyan/scheme/bin/scheme|' makefile
-sed -i 's|/usr/local/share/jupyter/kernels/mit-scheme|/home/jovyan/.local/jupyter/kernels/mit-scheme|' makefile
+sed -i 's|/usr/local/share/jupyter/kernels/mit-scheme|/home/jovyan/.local/share//jupyter/kernels/mit-scheme|' makefile
 sed -i 's|-L/usr/local/lib|-L/home/jovyan/zmq/lib|' makefile
 make
 make install
 
-sed -i 's|"/usr/local/share/jupyter/kernels/mit-scheme/load.scm"|"/home/jovyan/.local/jupyter/kernels/mit-scheme/load.scm"|' ~/.local/jupyter/kernels/mit-scheme/kernel.json
+sed -i 's|"/usr/local/share/jupyter/kernels/mit-scheme/load.scm"|"/home/jovyan/.local/share/jupyter/kernels/mit-scheme/load.scm"|' ~/.local/share/jupyter/kernels/mit-scheme/kernel.json
