@@ -8,9 +8,33 @@ python ~/binder/set_envs.py ~/.local/share/jupyter/kernels/lupyter/kernel.json ~
 
 cd ~
 mkdir scheme
+mkdir zmq
 wget http://ftp.gnu.org/gnu/mit-scheme/stable.pkg/9.2/mit-scheme-9.2-x86-64.tar.gz 2> /dev/null >/dev/null
 tar xf mit-scheme-9.2-x86-64.tar.gz 2> /dev/null >/dev/null
 cd mit-scheme-9.2/src/
 ./configure --prefix=/home/jovyan/scheme
 make compile-microcode
 make install
+
+cd ~
+wget https://github.com/zeromq/libzmq/releases/download/v4.2.1/zeromq-4.2.1.tar.gz
+tar xvf zeromq-4.2.1.tar.gz
+cd zeromq-4.2.1/
+./configure --prefix=/home/jovyan/zmq
+make
+make install
+
+cd ~
+git clone https://github.com/joeltg/mit-scheme-kernel
+cd mit-scheme-kernel
+export LD_LIBRARY_PATH=/home/jovyan/zmq/lib
+export LD_RUN_PATH=/home/jovyan/zmq/lib
+export CPATH=/home/jovyan/zmq/include
+
+sed -i 's|SCHEME = scheme| SCHEME = /home/jovyan/scheme/bin/scheme|' makefile
+sed -i 's|/usr/local/share/jupyter/kernels/mit-scheme|/home/jovyan/.local/jupyter/kernels/mit-scheme|' makefile
+sed -i 's|-L/usr/local/lib|-L/home/jovyan/zmq/lib|' makefile
+make
+make install
+
+sed -i 's|"/usr/local/share/jupyter/kernels/mit-scheme/load.scm"|"/home/jovyan/.local/jupyter/kernels/mit-scheme/load.scm"|' ~/.local/jupyter/kernels/mit-scheme/kernel.json
