@@ -2,3 +2,5 @@ lua5.3
 liblua5.3-dev
 lsof
 luarocks
+java
+
