@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:id="@+id/input"
+    android:inputType="numberDecimal"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:id="@+id/from">
+        <RadioButton
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:text="USD"
+            android:id="@+id/fromUSD"/>
+        <RadioButton
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:text="EUR"
+            android:id="@+id/fromEUR"/>
+        <RadioButton
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:text="CAD"
+            android:id="@+id/fromCAD"/>
+    </RadioGroup>
+
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:id="@+id/to">
+        <RadioButton
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:text="USD"
+            android:id="@+id/toUSD"/>
+        <RadioButton
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:text="EUR"
+            android:id="@+id/toEUR"/>
+        <RadioButton
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:text="CAD"
+            android:id="@+id/toCAD"/>
+    </RadioGroup>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/result"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/convert"
+        android:text="CONVERT"/>
+</LinearLayout>

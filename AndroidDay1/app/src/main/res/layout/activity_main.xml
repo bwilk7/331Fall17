@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:columnCount="3"
+    android:padding="10dp">
+
+    <EditText
+        android:layout_gravity="fill_horizontal"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_columnWeight="1"
+        android:id="@+id/homeTeam"/>
+    <TextView
+        android:layout_gravity="fill_horizontal"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_columnWeight="1"
+        android:text="Inning"/>
+
+
+    <EditText
+        android:layout_gravity="fill_horizontal"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_columnWeight="1"
+        android:id="@+id/awayTeam"/>
+
+
+    <TextView
+        android:text="0"
+        android:height="80dp"
+        android:layout_columnWeight="1"
+        android:layout_width="0dp"
+        android:layout_gravity="fill_horizontal"/>
+    <TextView
+        android:text="1"
+        android:height="80dp"
+        android:layout_columnWeight="1"
+        android:layout_width="0dp"
+        android:layout_gravity="fill_horizontal"/>
+    <TextView
+        android:text="0"
+        android:height="80dp"
+        android:layout_columnWeight="1"
+        android:layout_width="0dp"
+        android:layout_gravity="fill_horizontal"/>
+    <TextView
+        android:text="Balls"
+        android:height="80dp"
+        android:layout_columnWeight="1"
+        android:layout_width="0dp"
+        android:layout_gravity="fill_horizontal"/>
+    <TextView
+        android:text="Strikes"
+        android:height="80dp"
+        android:layout_columnWeight="1"
+        android:layout_width="0dp"
+        android:layout_gravity="fill_horizontal"/>
+    <TextView
+        android:text="Outs"
+        android:height="80dp"
+        android:layout_columnWeight="1"
+        android:layout_width="0dp"
+        android:layout_gravity="fill_horizontal"/>
+    <TextView
+        android:text="0"
+        android:height="80dp"
+        android:layout_columnWeight="1"
+        android:layout_width="0dp"
+        android:layout_gravity="fill_horizontal"/>
+    <TextView
+        android:text="0"
+        android:height="80dp"
+        android:layout_columnWeight="1"
+        android:layout_width="0dp"
+        android:id="@+id/strikeNum"
+        android:layout_gravity="fill_horizontal"/>
+    <TextView
+        android:text="0"
+        android:height="80dp"
+        android:layout_columnWeight="1"
+        android:layout_width="0dp"
+        android:id="@+id/outsNum"
+        android:layout_gravity="fill_horizontal"/>
+    <Button
+        android:text="Record Strike"
+        android:height="80dp"
+        android:layout_columnWeight="1"
+        android:layout_width="0dp"
+        android:layout_gravity="fill_horizontal"
+        android:id="@+id/strike"/>
+
+</GridLayout>

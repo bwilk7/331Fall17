@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:columnCount="4"
+    android:padding="10dp">
+
+<TextView android:text="1040 EZ (Simplified)"
+    android:layout_columnSpan="4"
+    android:layout_width="0dp"
+    android:layout_columnWeight="1"
+    android:height="80dp"
+    android:textSize="60sp"
+    android:layout_gravity="fill_horizontal"/>
+
+<TextView
+    android:text="Income: "
+    android:layout_width="0dp"
+    android:layout_columnWeight="1"
+    android:layout_columnSpan="2"
+    android:height="80dp"
+    android:textSize="30sp"
+    android:layout_gravity="fill_horizontal"/>
+<EditText
+    android:id="@+id/income"
+    android:layout_width="0dp"
+    android:layout_columnWeight="1"
+    android:height="80dp"
+    android:textSize="30sp"
+    android:layout_columnSpan="2"
+    android:inputType="numberDecimal"
+    android:layout_gravity="fill_horizontal"
+    />
+    <TextView
+        android:text="Interest: "
+        android:layout_width="0dp"
+        android:layout_columnWeight="1"
+        android:layout_columnSpan="2"
+        android:height="80dp"
+        android:textSize="30sp"
+        android:layout_gravity="fill_horizontal"/>
+    <EditText
+        android:id="@+id/interest"
+        android:layout_width="0dp"
+        android:layout_columnWeight="1"
+        android:height="80dp"
+        android:textSize="30sp"
+        android:layout_columnSpan="2"
+        android:inputType="numberDecimal"
+        android:layout_gravity="fill_horizontal"
+        />
+    <TextView
+        android:text="Deduction: "
+        android:layout_width="0dp"
+        android:layout_columnWeight="1"
+        android:height="80dp"
+        android:layout_columnSpan="2"
+        android:textSize="20sp"
+        android:layout_gravity="fill_horizontal"/>
+    <Button
+        android:text="Open worksheet"
+        android:layout_width="0dp"
+        android:layout_columnWeight="1"
+        android:height="80dp"
+        android:textSize="15sp"
+        android:layout_columnSpan="1"
+        android:id="@+id/deductionWorksheet"/>
+    <EditText
+        android:id="@+id/deduction"
+        android:layout_width="0dp"
+        android:layout_columnWeight="1"
+        android:height="80dp"
+        android:textSize="30sp"
+        android:layout_columnSpan="1"
+        android:inputType="numberDecimal"
+        />
+    <TextView
+        android:text="Taxable Income: "
+        android:layout_width="0dp"
+        android:layout_columnWeight="1"
+        android:layout_columnSpan="3"
+        android:height="60dp"
+        android:textSize="30sp"
+        android:layout_gravity="fill_horizontal" />
+
+    <TextView
+        android:text="$0.00 "
+        android:layout_width="0dp"
+        android:layout_columnWeight="1"
+        android:layout_columnSpan="1"
+        android:height="60dp"
+        android:textSize="30sp"
+        android:layout_gravity="fill_horizontal"
+        android:id="@+id/taxable"/>
+    <Button
+        android:text="Calculate "
+        android:layout_width="0dp"
+        android:layout_columnWeight="1"
+        android:layout_columnSpan="3"
+        android:height="80dp"
+        android:textSize="30sp"
+        android:layout_gravity="fill_horizontal"
+        android:id="@+id/calc"/>
+
+    <Button    android:text="Send "
+        android:layout_width="0dp"
+        android:layout_columnWeight="1"
+        android:layout_columnSpan="1"
+        android:height="80dp"
+        android:textSize="30sp"
+        android:layout_gravity="fill_horizontal"
+        android:id="@+id/send"/>/>
+</GridLayout>

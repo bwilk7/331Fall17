@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Worksheet"
+    android:columnCount="4"
+    android:padding="10dp"
+    >
+
+    <TextView
+        android:text="Income: "
+        android:layout_width="0dp"
+        android:layout_columnWeight="1"
+        android:layout_columnSpan="2"
+        android:height="80dp"
+        android:textSize="30sp"
+        android:layout_gravity="fill_horizontal"/>
+    <TextView
+        android:id="@+id/worksheetIncome"
+        android:layout_width="0dp"
+        android:layout_columnWeight="1"
+        android:height="80dp"
+        android:textSize="30sp"
+        android:layout_columnSpan="2"
+        android:layout_gravity="fill_horizontal"
+        />
+
+        <Switch
+            android:id="@+id/dependent"
+            android:text="Are you a dependent?"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:height="80dp"
+            android:textSize="30sp"
+            android:layout_columnSpan="4"
+            android:layout_gravity="fill_horizontal"/>
+
+    <TextView
+        android:text="Filing Status: "
+        android:layout_width="0dp"
+        android:layout_columnWeight="1"
+        android:layout_height="80dp"
+        android:textSize="30sp"
+        android:layout_columnSpan="4"
+
+        android:layout_gravity="fill_horizontal"/>
+
+    <RadioGroup
+        android:id="@+id/status"
+        android:layout_width="0dp"
+        android:layout_columnWeight="1"
+        android:layout_height="80dp"
+        android:textSize="30sp"
+        android:layout_columnSpan="4"
+        android:layout_gravity="fill_horizontal"
+        android:orientation="horizontal"
+        >
+        <RadioButton
+            android:id="@+id/single"
+            android:text="Single"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:textSize="30sp"
+            android:layout_gravity="fill_horizontal"/>
+        <RadioButton
+            android:text="Married (Joint)"
+            android:id="@+id/joint"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:textSize="30sp"
+            android:layout_gravity="fill_horizontal"/>
+    </RadioGroup>
+
+    <Button
+        android:text="Calculate"
+        android:id="@+id/calculateDeduction"
+        android:layout_width="0dp"
+        android:layout_columnWeight="1"
+        android:layout_height="80dp"
+        android:textSize="30sp"
+        android:layout_columnSpan="4"
+        android:layout_gravity="fill_horizontal"/>
+</GridLayout>
