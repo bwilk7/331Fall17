@@ -32,6 +32,11 @@ public class MainActivity extends AppCompatActivity {
             CardView cv = (CardView)view;
             TextView tv = (TextView) cv.getChildAt(0);
 
+            String name = tv.getText().toString();
+
+            Intent recipeIntent = new Intent(MainActivity.this, RecipeView.class);
+            recipeIntent.putExtra("name",name);
+            startActivity(recipeIntent);
 
         }
     }

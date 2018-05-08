@@ -1,8 +1,16 @@
 package com.example.bryan.recipies;
 
+import android.Manifest;
+import android.app.AlarmManager;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.provider.AlarmClock;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -11,6 +19,7 @@ import java.util.HashMap;
 public class RecipeView extends AppCompatActivity {
 
     private HashMap<String,Recipe> recipes;
+    Recipe r;
     public RecipeView()
     {
         recipes = new HashMap<String,Recipe>();
@@ -34,12 +43,14 @@ public class RecipeView extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipe_view);
 
+        Intent whyHere = getIntent();
         TextView list = (TextView)findViewById(R.id.ingredients);
         TextView instructions = (TextView)findViewById(R.id.steps);
         TextView time = (TextView)findViewById(R.id.time);
         TextView name = (TextView)findViewById(R.id.name);
-        String nameString = "";
-        Recipe r = null; //CODEHERE
+        String nameString = whyHere.getStringExtra("name");
+
+        r = recipes.get(nameString);
         String ingredients = "";
         for(String ingredient: r.getIngredients()){
             ingredients += ingredient + " ";
@@ -49,6 +60,27 @@ public class RecipeView extends AppCompatActivity {
         time.setText(Double.toString(r.getTime()));
         name.setText(nameString);
 
+        Button timerButton = (Button)findViewById(R.id.startTimer);
+        timerButton.setOnClickListener(new TimerListener());
 
+    }
+
+    private class TimerListener implements View.OnClickListener {
+        @Override
+        public void onClick(View view) {
+            Intent timerIntent = new Intent(AlarmClock.ACTION_SET_TIMER);
+            timerIntent.putExtra(AlarmClock.EXTRA_LENGTH, (int)(r.getTime() * 60));
+            timerIntent.putExtra(AlarmClock.EXTRA_MESSAGE,"POPCORN");
+            timerIntent.putExtra(AlarmClock.EXTRA_SKIP_UI,false);
+            if(timerIntent.resolveActivity(getPackageManager()) != null){
+                    Log.d("HERE","HERE");
+                    startActivity(timerIntent);
+
+            }
+            else{
+                Log.d("DEBUG","ERROR!!");
+            }
+
+        }
     }
 }
