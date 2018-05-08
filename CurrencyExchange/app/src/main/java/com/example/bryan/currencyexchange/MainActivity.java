@@ -12,5 +12,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Button convert = (Button)findViewById(R.id.convert);
+        convert.setOnClickListener(new ConvertListener());
+
     }
 }
