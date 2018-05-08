@@ -20,14 +20,15 @@ public class Worksheet extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_worksheet);
-        Intent launcher = getIntent();
 
+        Intent launcher = getIntent();
+        income = launcher.getDoubleExtra("income",0.0);
 
         Button calculate = (Button)findViewById(R.id.calculateDeduction);
         calculate.setOnClickListener(new CalculateDeduction());
 
         TextView incomeView = (TextView)findViewById(R.id.worksheetIncome);
-
+        incomeView.setText(Double.toString(income));
 
 
     }
@@ -62,6 +63,12 @@ public class Worksheet extends AppCompatActivity {
             else{
                 line_e = line_c;
             }
+
+            Intent result = new Intent();
+            result.putExtra("deduction", line_e + line_f);
+            setResult(RESULT_OK, result);
+            finish();
+
             
         }
     }
