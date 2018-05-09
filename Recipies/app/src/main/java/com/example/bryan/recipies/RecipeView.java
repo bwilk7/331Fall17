@@ -73,13 +73,10 @@ public class RecipeView extends AppCompatActivity {
             timerIntent.putExtra(AlarmClock.EXTRA_MESSAGE,"POPCORN");
             timerIntent.putExtra(AlarmClock.EXTRA_SKIP_UI,false);
             if(timerIntent.resolveActivity(getPackageManager()) != null){
-                    Log.d("HERE","HERE");
                     startActivity(timerIntent);
 
             }
-            else{
-                Log.d("DEBUG","ERROR!!");
-            }
+
 
         }
     }

@@ -1,9 +1,16 @@
 package com.example.bryan.multipleintentsexercise;
 
+import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Environment;
+import android.support.annotation.NonNull;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,6 +19,10 @@ import android.widget.TextView;
 import org.w3c.dom.Text;
 
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintWriter;
 import java.net.URISyntaxException;
 
 
@@ -19,6 +30,14 @@ public class MainActivity extends AppCompatActivity {
 
     private final int DEDUCTION_REQUEST = 30;
 
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        if(grantResults[0] == PackageManager.PERMISSION_GRANTED){
+            TextView tv = (TextView)findViewById(R.id.taxable);
+            writeTaxes(tv.getText().toString());
+        }
+    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -92,9 +111,32 @@ public class MainActivity extends AppCompatActivity {
             if(sendIntent.resolveActivity(getPackageManager()) != null){
                 startActivity(sendIntent);
             }else{
-                sendIntent.setData(Uri.parse("sms://4104551000"));
+                /*sendIntent.setData(Uri.parse("sms://4104551000"));
                 sendIntent.putExtra("sms_body", "Your taxes are" + tax.getText());
-                startActivity(sendIntent);
+                startActivity(sendIntent);*/
+                String[] permissions =  {Manifest.permission.WRITE_EXTERNAL_STORAGE};
+
+                if(ContextCompat.checkSelfPermission(MainActivity.this,Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED){
+                    writeTaxes(tax.getText().toString());
+                }
+                else{
+                    requestPermissions(permissions,4500);
+                }
+
+            }
+        }
+    }
+
+    private void writeTaxes(String tax) {
+        if(Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)){
+            File location = getExternalFilesDir(null);
+            try {
+                PrintWriter pw = new PrintWriter(new FileOutputStream(
+                        location.getAbsoluteFile() + "/taxes.txt"));
+                pw.println(tax);
+                pw.close();
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
             }
         }
     }
